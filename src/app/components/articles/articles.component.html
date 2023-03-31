@@ -1,0 +1,10 @@
+<div class="flex" *ngFor="let item of articleList">
+  <!-- BOX -->
+  <div class="box" (click)="openDeatail(item)">{{getFirstLetters(item.userId | userIdPipe:this.users)}}</div>
+  <!-- TITLE AND DESC -->
+  <div class="w-full">
+    <h3>{{item.title}}</h3>
+    <p>{{item.body}}</p>
+      <p class="author">Pubblicato Da: <b>{{item.userId | userIdPipe:this.users}}</b></p>
+    </div>
+</div>
